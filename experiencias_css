@@ -1,0 +1,74 @@
+/* Estilos para el contenedor principal */
+.standard_wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el título y subtítulo */
+.ppb_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.page_tagline {
+  font-size: 18px;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+/* Estilos para las columnas de testimonios */
+.ppb_testimonial_column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Ajuste para mostrar dos cuadros por fila */
+.testimonial_column_element {
+  width: 48%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #333;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white; /* Fondo blanco */
+  border: none; /* Eliminar borde */
+  box-shadow: none; /* Eliminar sombra */
+}
+
+/* Estilo para la imagen dentro del cuadro */
+.testimonial_column_element img {
+  max-width: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Estilos para el contenido del testimonio */
+.testimonial_content {
+  font-size: 16px;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.testimonial_customer h6 {
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.testimonial_customer_position {
+  font-size: 14px;
+  color: #555;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+/* Estilo para el texto "Conocé la opinión de los viajeros que nos eligen" */
+.page_tagline {
+  color: #888; /* Cambiado a un gris más claro */
+}
