@@ -28,8 +28,7 @@
 
 </head>
 
-<body>
-
+<body style="background-color: #df3385;">
   <header>
     <nav>
       <a class="logoHeaderA" href="index.html"><img class="logoHeader" src="./imagenes/travelogoheader.png" alt="" />
@@ -45,55 +44,72 @@
 
 
   <main>
+      <div class="contact_form">
 
-    <section class="sectionCardsClima">
-      <h2 id="tittleViajes">Ponete en contacto con nosotros...</h2>
-
-
-      <form action="" name="formContacto">
-
-        <!--
-        <label for="nombre">Nombre</label>
-        -->
-        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" class="inputNormal" size="38">
-        <br><br>
-        <!-- 
-        <label for="email">Email</label>
-        -->
-        <input type="text" name="email" id="email" placeholder="Tu email" class="inputNormal" size="38">
-        <br><br>
-        <!--
-        <label for="telefono">Teléfono</label>
-        -->
-        <input type="text" name="telefono" id="telefono" placeholder="Tu teléfono" class="inputNormal" size="38">
-        <br><br>
-        <select name="viajes" id="viajes" class="inputNormal">
-          <option value="opcionSEL" id="SEL">Te interesa algún paquete?</option>
-          <option value="opcionVCP" id="VCP">Villa Carlos Paz</option>
-          <option value="opcionCAT" id="CAT">Cataratas del Iguazú</option>
-          <option value="opcionFED" id="FED">Federación</option>
-          <option value="opcionBAR" id="BAR">Bariloche</option>
-          <option value="opcionCAM" id="CAM">Camboriú</option>
-          <option value="opcionMER" id="MER">Merlo</option>
-          <option value="opcionMSF" id="MSF">Mendoza &amp; San Rafael</option>
-          <option value="opcionSMB" id="SMB">San Martín de los Andes &amp; Bariloche</option>
-        </select>
-        <br><br>
-        <!--
-        <label for="mensaje">Mensaje</label>
-        -->
-        <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje..." class="inputNormal" rows="3"
-          cols="38"></textarea>
-        <br><br>
-        <input type="button" value="Enviar" onclick="validar()">
-
-      </form>
-
+        <div class="formulario">			
+          <h1>Formulario de contacto</h1>
+            <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+    
+    
+              <form action="submeter-formulario.php" method="post">				
+    
+                    <p>
+                      <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </p>
+                  
+                    <p>
+                      <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </p>
+                
+                    <p>
+                      <label for="telefone" class="colocar_telefono">Teléfono
+                      </label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </p>		
+                  
+                    <p>
+                      <label for="website" class="colocar_website">¿Te interesa algún paquete?
+                      </label>
+                    <p>
+                    <select name="viajes" id="viajes" class="inputNormal">
+                      <option value="opcionSEL" id="SEL">Elegí tu destino</option>
+                      <option value="opcionVCP" id="VCP">Villa Carlos Paz</option>
+                      <option value="opcionCAT" id="CAT">Cataratas del Iguazú</option>
+                      <option value="opcionFED" id="FED">Federación</option>
+                      <option value="opcionBAR" id="BAR">Bariloche</option>
+                      <option value="opcionCAM" id="CAM">Camboriú</option>
+                      <option value="opcionMER" id="MER">Merlo</option>
+                      <option value="opcionMSF" id="MSF">Mendoza &amp; San Rafael</option>
+                      <option value="opcionSMB" id="SMB">San Martín de los Andes &amp; Bariloche</option>
+                    </select>
+                   </p> 
+                    <p>
+                      <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                      </label>                     
+                                         <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                     </p>	  								
+                  
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+    
+                    <p class="aviso">
+                      <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>					
+                
+              </form>
+        </div>	
+      </div>
 
 
     </section>
   </main>
-
+  <br> 
 
     <!-- VALEN -->
     <footer class="footer">
