@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codo a Codo Travel</title>
+  <link rel="shortcut icon" href="imagenes/viajar.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="estilos/estilos_general.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  // Inicialmente se hace referencia a un js aparte para el form
+  // luego se unirá al general
+
+  <script src="./JS/contacto.js"></script>
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a class="logoHeaderA" href="index.html"><img class="logoHeader" src="./imagenes/travelogoheader.png" alt="" />
+      </a>
+      <ul class="ulNav">
+        <li class="liNav"><a class="aNav" href="index.html">Inicio</a></li>
+        <li class="liNav"><a class="aNav" href="index.html#reseñas">Reseñas</a></li>
+        <li class="liNav"><a class="aNav" href="index.html#novedades">Novedades</a></li>
+        <li class="liNav"><a class="aNav" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="sectionCardsClima">
+      <h2 id="tittleViajes">Ponete en contacto con nosotros...</h2>
+
+
+      <form action="" name="formContacto">
+
+        <!--
+        <label for="nombre">Nombre</label>
+        -->
+        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" class="inputNormal" size="38">
+        <br><br>
+        <!-- 
+        <label for="email">Email</label>
+        -->
+        <input type="text" name="email" id="email" placeholder="Tu email" class="inputNormal" size="38">
+        <br><br>
+        <!--
+        <label for="telefono">Teléfono</label>
+        -->
+        <input type="text" name="telefono" id="telefono" placeholder="Tu teléfono" class="inputNormal" size="38">
+        <br><br>
+        <select name="viajes" id="viajes" class="inputNormal">
+          <option value="opcionSEL" id="SEL">Te interesa algún paquete?</option>
+          <option value="opcionVCP" id="VCP">Villa Carlos Paz</option>
+          <option value="opcionCAT" id="CAT">Cataratas del Iguazú</option>
+          <option value="opcionFED" id="FED">Federación</option>
+          <option value="opcionBAR" id="BAR">Bariloche</option>
+          <option value="opcionCAM" id="CAM">Camboriú</option>
+          <option value="opcionMER" id="MER">Merlo</option>
+          <option value="opcionMSF" id="MSF">Mendoza &amp; San Rafael</option>
+          <option value="opcionSMB" id="SMB">San Martín de los Andes &amp; Bariloche</option>
+        </select>
+        <br><br>
+        <!--
+        <label for="mensaje">Mensaje</label>
+        -->
+        <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje..." class="inputNormal" rows="3"
+          cols="38"></textarea>
+        <br><br>
+        <input type="button" value="Enviar" onclick="validar()">
+
+      </form>
+
+
+
+    </section>
+  </main>
+
+
+    <!-- VALEN -->
+    <footer class="footer">
+      <div class="contenedorFooter">
+        <div class="boxes">
+          <figure>
+            <a href="#">
+              <img src="imagenes/travelogo.png" alt="Logo travel" />
+            </a>
+          </figure>
+        </div>
+        <div class="boxes">
+          <div class="info">
+            <p class="infoP">codoacodotravel@gmail.com</p>
+            <p class="infoP">0800 333 7429 / 15 3692 6718</p>
+            <p class="infoP">Guemes 515, Piso 6, CABA</p>
+            <p class="infoP">Lunes a viernes de 09 a 17 hs</p>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="red-social">
+            <a
+              href="https://www.facebook.com/TurismoNacionAR"
+              class="fa fa-facebook"
+            ></a>
+            <a
+              href="https://www.instagram.com/turismonacionar/"
+              class="fa fa-instagram"
+            ></a>
+            <a
+              href="https://twitter.com/TurismoNacionAR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              class="fa fa-twitter"
+            ></a>
+          </div>
+        </div>
+        <div class="derechos">
+          <small
+            >&copy; 2023 <b> Codo a Codo Travel</b> - Todos los Derechos
+            Reservados</small
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- VALEN -->
+</body>
+
+</html>
