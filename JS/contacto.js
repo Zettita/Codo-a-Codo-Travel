@@ -91,4 +91,11 @@ function validar() {
         console.log("El campo mensaje es valido (" + mensaje + ").")
         document.getElementById("mensaje").className = "inputValido";
     }
+
+
+    if(esValido){
+        alert("Formulario Validado OK")
+    } else {
+        alert("Formulario Invalido NOK")
+    }
 }
