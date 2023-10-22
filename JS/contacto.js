@@ -1,6 +1,6 @@
 function validar() {
 
-    //Hecha x el grupo 10 de la Comisión XXXXXX de Codo a Codo
+    //Hecha x el grupo 10 de la Comisión 23511 de Codo a Codo
     //Integrantes:
     //
     //
@@ -48,9 +48,6 @@ function validar() {
     //$     : al final del string
 
 
-    //3 digitos
-
-
 
     let nombre = document.forms["formContacto"]["nombre"].value;
     let email = document.forms["formContacto"]["email"].value;
@@ -58,40 +55,40 @@ function validar() {
     let mensaje = document.forms["formContacto"]["mensaje"].value;
 
     if (!regexNombre.test(nombre)) {
-        console.log(nombre + " es invalida");
+        console.log("El campo nombre NO es valido (" + nombre + ").");
         document.getElementById("nombre").className = "inputInvalido";
         esValido = false
     } else {
-        console.log(nombre + " es valida")
+        console.log("El campo nombre es valido (" + nombre + ").")
         document.getElementById("nombre").className = "inputValido";
     }
 
     if (!regexEmail.test(email)) {
-        console.log(email + " es invalida");
+        console.log("El campo email NO es valido (" + email + ").");
         document.getElementById("email").className = "inputInvalido";
         esValido = false
     } else {
-        console.log(email + " es valida")
+        console.log("El campo email es valido (" + email + ").")
         document.getElementById("email").className = "inputValido";
     }
 
 
     if (!regexTelefono.test(telefono)) {
-        console.log(telefono + " es invalida");
+        console.log("El campo teléfono NO es valido (" + telefono + ").");
         document.getElementById("telefono").className = "inputInvalido";
         esValido = false
     } else {
-        console.log(telefono + " es valida")
+        console.log("El campo teléfono es valido (" + telefono + ").")
         document.getElementById("telefono").className = "inputValido";
     }
 
 
     if (mensaje == "") { //solo considera invalidos los msgs vacios
-        console.log(mensaje + " es invalida");
+        console.log("El campo mensaje NO es valido (" + mensaje + ").");
         document.getElementById("mensaje").className = "inputInvalido";
         esValido = false
     } else {
-        console.log(mensaje + " es valida")
+        console.log("El campo mensaje es valido (" + mensaje + ").")
         document.getElementById("mensaje").className = "inputValido";
     }
 }
