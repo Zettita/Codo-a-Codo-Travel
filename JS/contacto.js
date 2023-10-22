@@ -37,21 +37,61 @@ function validar() {
     //$     : al final del string
     //gmi   : global, multiline, no discrimina mayusculas ni mins
 
+    const regexTelefono = /^\d{3}\s\d{4}-\d{4}$/gmi;
+    //regex testeada en https://regex101.com/
+    //^     : desde el principio del string
+    //\d{3} : 3 digitos, area como 011
+    //\s    : caracter espacio
+    //\d{4} : 4 digitos
+    //-     : guion
+    //\d{4} : 4 digitos
+    //$     : al final del string
+
+
+    //3 digitos
+
+
+
     let nombre = document.forms["formContacto"]["nombre"].value;
     let email = document.forms["formContacto"]["email"].value;
+    let telefono = document.forms["formContacto"]["telefono"].value;
+    let mensaje = document.forms["formContacto"]["mensaje"].value;
 
     if (!regexNombre.test(nombre)) {
         console.log(nombre + " es invalida");
+        document.getElementById("nombre").className = "inputInvalido";
         esValido = false
     } else {
         console.log(nombre + " es valida")
+        document.getElementById("nombre").className = "inputValido";
     }
 
     if (!regexEmail.test(email)) {
         console.log(email + " es invalida");
+        document.getElementById("email").className = "inputInvalido";
         esValido = false
     } else {
         console.log(email + " es valida")
+        document.getElementById("email").className = "inputValido";
     }
 
+
+    if (!regexTelefono.test(telefono)) {
+        console.log(telefono + " es invalida");
+        document.getElementById("telefono").className = "inputInvalido";
+        esValido = false
+    } else {
+        console.log(telefono + " es valida")
+        document.getElementById("telefono").className = "inputValido";
+    }
+
+
+    if (mensaje == "") { //solo considera invalidos los msgs vacios
+        console.log(mensaje + " es invalida");
+        document.getElementById("mensaje").className = "inputInvalido";
+        esValido = false
+    } else {
+        console.log(mensaje + " es valida")
+        document.getElementById("mensaje").className = "inputValido";
+    }
 }

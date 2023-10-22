@@ -557,3 +557,48 @@ nav {
 }
 
 /* VALEN */
+
+
+/* CRISTIAN */
+
+
+.inputNormal{
+  padding: 4px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+
+}
+
+.inputInvalido {
+  padding: 4px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: crimson;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+
+.inputValido {
+  padding: 4px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color:  green;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+
+/* CRISTIAN */
