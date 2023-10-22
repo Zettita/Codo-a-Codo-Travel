@@ -19,6 +19,7 @@ function validar() {
     // Definición de las regex para la validación de los campos
     const regexNombre = /^[a-z\s]+$/gmi;
     //regex testeada en https://regex101.com/
+    //el formato esperado son letras y espacios
     //^     : desde el principio del string
     //a-z   : caracteres de la "a" a la "z"
     //\s    : espacio
@@ -28,6 +29,7 @@ function validar() {
 
     const regexEmail = /^[a-z0-9]+@[a-z0-9]+(.[a-z0-9]+){1,2}$/gmi;
     //regex testeada en https://regex101.com/
+    //el formato esperado es xxxxx@xxxxxx + 1 o 2 .xxxx
     //^     : desde el principio del string
     //a-z   : caracteres de la "a" a la "z"
     //0-9   : números
@@ -39,6 +41,7 @@ function validar() {
 
     const regexTelefono = /^\d{3}\s\d{4}-\d{4}$/gmi;
     //regex testeada en https://regex101.com/
+    //el formato esperado es nnn nnnn-nnnnn
     //^     : desde el principio del string
     //\d{3} : 3 digitos, area como 011
     //\s    : caracter espacio
