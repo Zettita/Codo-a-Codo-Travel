@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codo a Codo Travel</title>
+    <link rel="shortcut icon" href="imagenes/viajar.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/estilos_general.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+<body>
+
+    <header>
+        <nav>
+            <a class="logoHeaderA" href="index.html"><img class="logoHeader" src="./imagenes/travelogoheader.png"
+                    alt="" />
+            </a>
+            <ul class="ulNav">
+                <li class="liNav"><a class="aNav" href="index.html">Inicio</a></li>
+                <li class="liNav"><a class="aNav" href="index.html#reseñas">Reseñas</a></li>
+                <li class="liNav"><a class="aNav" href="index.html#novedades">Novedades</a></li>
+                <li class="liNav"><a class="aNav" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="sectionCardsClima">
+          <h2 id="tittleViajes">Ponete en contacto con nosotros...</h2>
+    <form action="" name="formContacto">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Tu email">
+        <br>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="Tu teléfono">
+        <br>
+        <label for="viajes">Tu contacto es por alguno de nuestros
+            paquetes?</label>
+        <select name="viajes" id="viajes">
+            <option value="opcionSEL" id="SEL">Seleccionar</option>
+            <option value="opcionVCP" id="VCP">Villa Carlos Paz</option>
+            <option value="opcionCAT" id="CAT">Cataratas del Iguazú</option>
+            <option value="opcionFED" id="FED">Federación</option>
+            <option value="opcionBAR" id="BAR">Bariloche</option>
+            <option value="opcionCAM" id="CAM">Camboriú</option>
+            <option value="opcionMER" id="MER">Merlo</option>
+            <option value="opcionMSF" id="MSF">Mendoza &amp; San Rafael</option>
+            <option value="opcionSMB" id="SMB">San Martín de los Andes &amp; Bariloche</option>
+        </select>
+        <br>
+        <label for="mensaje">Mensaje</label>
+        <input type="textarea" name="mensaje" id="mensaje" placeholder="Tu mensaje...">
+        <br>
+        <input type="button" value="Enviar" onclick="validar()">
+
+    </form>
+</section>
+</main>
+</body>
+
+</html>
