@@ -2,10 +2,11 @@ function validar() {
 
     //Hecha x el grupo 10 de la Comisión 23511 de Codo a Codo
     //Integrantes:
-    //
-    //
-    //
-    //
+    //Uriel
+    //Cristian
+    //Melanie
+    //Belen
+    //Valentina
 
 
     let esValido = true
