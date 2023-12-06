@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Reserva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Agregar Reserva</h1>
+    <h3>Codo a Codo</h3>
+
+    <!--enctype="multipart/form-data es necesario para enviar archivos al back.-->
+    <form id="formulario" enctype="multipart/form-data>
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required><br>
+
+        <label for="inicio">Inicio:</label>
+        <input type="number" step="0.01" id="inicio" name="inicio" required><br>
+
+        <label for="final">Final:</label>
+        <input type="number" step="0.01" id="final" name="final" required><br>
+
+        <label for="dias">Dias:</label>
+        <input type="number" step="0.01" id="dias" name="dias" required><br>
+    
+        <label for="precio">Precio:</label>
+        <input type="number" step="0.01" id="precio" name="precio" required><br>
+
+        <label for="imagenProducto">Imagen del producto:</label>
+        <input type="file" id="imagenProducto" name="imagen">
+
+        <label for="proveedorProducto">Proveedor:</label>
+        <input type="text" id="proveedorProducto" name="proveedor">
+        
+        <button type="submit">Agregar Reserva</button>
+        <a href="index.html">Menu principal</a>
+    </form>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+
+        // Capturamos el evento de envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitamos que se envie el form 
+
+            var formData = new FormData();
+            formData.append('destino', document.getElementById('destino').value);
+            formData.append('inicio', document.getElementById('inicio').value);
+            formData.append('final', document.getElementById('final').value);
+            formData.append('dias', document.getElementById('dias').value);
+            formData.append('precio', document.getElementById('precio').value);
+            formData.append('proveedor', document.getElementById('proveedorProducto').value);
+            formData.append('imagen', document.getElementById('imagenProducto').files[0]);
+            
+            fetch(URL + 'productos', {
+                method: 'POST',
+                body: formData // Aquí enviamos formData en lugar de JSON
+            })
+            .then(function (response) {
+                if (response.ok) { return response.json(); }
+            })
+            .then(function (data) {
+                alert('Producto agregado correctamente.');
+                // Limpiar el formulario para el proximo producto
+                document.getElementById('destino').value = "";
+                document.getElementById('inicio').value = "";
+                document.getElementById('final').value = "";
+                document.getElementById('dias').value = "";
+                document.getElementById('precio').value = "";
+                document.getElementById('imagen').value = "";
+                document.getElementById('proveedor').value = "";
+            })
+            .catch(function (error) {
+                // Mostramos el error, y no limpiamos el form.
+                alert('Error al agregar el producto.');
+            });
+            
+        })
+    </script>
+</body>
+
+</html>
